@@ -1,0 +1,300 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: rgb(8, 9, 19);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 4%;
+  width: 20%;
+}
+.brand .fa-github {
+  font-size: 35px;
+}
+.brand h1 {
+  margin-left: 5%;
+}
+.navbar {
+  position: relative;
+  width: 60%;
+  padding: 1%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.searchBox {
+  position: relative;
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.searchBox input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  padding: 1%;
+  text-indent: 10px;
+  font-size: 18px;
+}
+
+ul {
+  width: auto; 
+  text-align: center;
+}
+ul li {
+  display: inline-block;
+  margin-left: 4%;
+  transition: all 0.5s ease;
+  text-align: center;
+  cursor: pointer;
+  padding: 1%;
+  height: 20px;
+  overflow: hidden;
+}
+ul li:hover {
+  height: 45px;
+}
+ul li #headIcon {
+  display: block;
+  font-size: 22px;
+}
+
+ul li a:active,
+:focus {
+  text-decoration: underline;
+  font-weight: 700;
+}
+#menuIcon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    display: block;
+    width: 60%;
+    display: none;
+  }
+  .navbar.navactive {
+    display: inline;
+  }
+  .searchBox {
+    position: relative;
+    width: 100%;
+    top: 60px;
+    z-index: 221;
+    left: 5%;
+  }
+
+  .navbar ul {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(8, 9, 19);
+  }
+  .navbar ul li {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    position: relative;
+    top: 50px;
+    padding: 2%;
+  }
+ 
+  ul li:hover {
+    background: rgb(35, 36, 51);
+  }
+  ul li a {
+    margin-left: 40px;
+    font-family: 600;
+  }
+  .vaciarCarrito{
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .vaciarCarrito:hover {
+    background-color: #d32f2f;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      position: relative;
+      display: block;
+      width: 60%;
+      display: none;
+    }
+    .loginButton{
+    align-content: end;
+    }
+    .navbar.navactive {
+      display: inline;
+    }
+    .searchBox {
+      position: relative;
+      width: 100%;
+      top: 60px;
+      z-index: 221;
+      left: 5%;
+    }
+    #menuIcon {
+      display: inline;
+      position: fixed;
+      font-size: 25px;
+      margin-left: 88%;
+      z-index: 222;
+      float: right;
+      padding: 1%;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid rgb(221, 221, 221);
+    }
+    .navbar ul {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(8, 9, 19);
+    }
+    .navbar ul li {
+      display: block;
+      margin-top: 20px;
+      width: 100%;
+      height: 40px;
+      text-align: left;
+      position: relative;
+      top: 50px;
+      padding: 2%;
+    }
+    ul li #headIcon {
+      display: inline-block;
+      font-size: 33px;
+    }
+    ul li:hover {
+      background: rgb(35, 36, 51);
+    }
+    ul li a {
+      margin-left: 40px;
+      font-family: 600;
+    }
+    .vaciarCarrito{
+      background-color: #f44336;
+      color: white;
+    }
+    
+    .vaciarCarrito:hover {
+      background-color: #d32f2f;
+    }
+    
+  }
+
+/* Agregamos estilos para la vista del carrito de compras */
+.cartView {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  background-color: rgb(8, 9, 19);
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: none; /* Por defecto, ocultamos la vista del carrito */
+  z-index: 999; /* Aseguramos que la vista del carrito esté en la parte superior */
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cartItem img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.cartButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+.cartView.show {
+  display: block; /* Mostramos la vista del carrito al agregar la clase "show" */
+}
+
+.cartItem h3,
+.cartItem p {
+  margin: 0;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.procesarCompra {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button.procesarCompra:hover {
+  background-color: #45a049;
+}
+
+button.vaciarCarrito {
+  background-color: #f44336;
+  color: white;
+}
+
+button.vaciarCarrito:hover {
+  background-color: #d32f2f;
+}
+
+}
+
+#headIcon {
+  font-size: 30px;
+  margin-right: 80px;
+}
+
+#loginButton {
+  font-size: 16px;
+  margin-left: 80px;
+}
+
+#loginButton {
+  position: relative;
+}
+
+#loginButton .button-text {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#loginButton:hover .button-text {
+  opacity: 1;
+}

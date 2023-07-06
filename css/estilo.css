@@ -1,0 +1,28 @@
+#cargando {
+    display: none;
+    position: fixed;
+
+}
+
+#validacionCrud{
+	position: absolute; 
+	margin-top: 10vw;
+	margin-left: 35vw;
+    background: rgb(255, 255, 255);    
+    min-width: 300px;
+    width: 35%;
+    min-height: 280px;
+    border: solid 2px black;
+    border-radius: 10px;
+
+}
+
+#carritoHeader{
+    max-height: 400px;
+    height: auto;
+    padding: 5px;
+    border: solid 1px rgb(213, 213, 213);
+    border-radius: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
