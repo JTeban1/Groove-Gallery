@@ -27,5 +27,6 @@
 + [Sebastían Luján Ríos](https://github.com/TonyMontanas7 "Sebastían Luján Ríos")
 + [Mateo Saldarriaga Vanegas](https://github.com/AronHero "Mateo Saldarriaga Vanegas")
 + [Juan Felipe Isaza Gómez](https://github.com/JfIsazaG "Juan Felipe Isaza Gómez")
++ [Miguel Cardona Grajales]
 
 
